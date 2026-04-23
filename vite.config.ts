@@ -26,14 +26,30 @@ export default defineConfig(({ mode }) => ({
         theme_color: "#4f46e5",
         background_color: "#ffffff",
         display: "standalone",
+        start_url: "/",
         icons: [
+          {
+            src: "og-image.png",
+            sizes: "192x192",
+            type: "image/png",
+            purpose: "any",
+          },
           {
             src: "og-image.png",
             sizes: "512x512",
             type: "image/png",
-            purpose: "any maskable",
+            purpose: "any",
+          },
+          {
+            src: "og-image.png",
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "maskable",
           },
         ],
+      },
+      devOptions: {
+        enabled: true,
       },
     }),
   ].filter(Boolean),
