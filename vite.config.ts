@@ -18,7 +18,13 @@ export default defineConfig(({ mode }) => ({
     mode === "development" && componentTagger(),
     VitePWA({
       registerType: "autoUpdate",
-      includeAssets: ["favicon.ico", "robots.txt", "og-image.png"],
+      includeAssets: [
+        "favicon.ico", 
+        "robots.txt", 
+        "pwa-192x192.png", 
+        "pwa-512x512.png", 
+        "maskable-icon.png"
+      ],
       workbox: {
         globPatterns: ["**/*.{js,css,html,ico,png,svg,webmanifest}"],
       },
@@ -34,19 +40,19 @@ export default defineConfig(({ mode }) => ({
         start_url: "/",
         icons: [
           {
-            src: "/og-image.png",
+            src: "pwa-192x192.png",
             sizes: "192x192",
             type: "image/png",
             purpose: "any",
           },
           {
-            src: "/og-image.png",
+            src: "pwa-512x512.png",
             sizes: "512x512",
             type: "image/png",
             purpose: "any",
           },
           {
-            src: "/og-image.png",
+            src: "maskable-icon.png",
             sizes: "512x512",
             type: "image/png",
             purpose: "maskable",
@@ -54,15 +60,15 @@ export default defineConfig(({ mode }) => ({
         ],
         screenshots: [
           {
-            src: "/og-image.png",
-            sizes: "1200x630",
+            src: "screenshot-wide.png",
+            sizes: "1280x720",
             type: "image/png",
             form_factor: "wide",
             label: "Smart Scan Attendance System - Desktop"
           },
           {
-            src: "/og-image.png",
-            sizes: "1200x630",
+            src: "screenshot-narrow.png",
+            sizes: "750x1334",
             type: "image/png",
             form_factor: "narrow",
             label: "Smart Scan Attendance System - Mobile"
