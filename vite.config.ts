@@ -34,24 +34,40 @@ export default defineConfig(({ mode }) => ({
         start_url: "/",
         icons: [
           {
-            src: "og-image.png",
+            src: "/og-image.png",
             sizes: "192x192",
             type: "image/png",
             purpose: "any",
           },
           {
-            src: "og-image.png",
+            src: "/og-image.png",
             sizes: "512x512",
             type: "image/png",
             purpose: "any",
           },
           {
-            src: "og-image.png",
+            src: "/og-image.png",
             sizes: "512x512",
             type: "image/png",
             purpose: "maskable",
           },
         ],
+        screenshots: [
+          {
+            src: "/og-image.png",
+            sizes: "1200x630",
+            type: "image/png",
+            form_factor: "wide",
+            label: "Smart Scan Attendance System - Desktop"
+          },
+          {
+            src: "/og-image.png",
+            sizes: "1200x630",
+            type: "image/png",
+            form_factor: "narrow",
+            label: "Smart Scan Attendance System - Mobile"
+          }
+        ]
       },
       devOptions: {
         enabled: true,
