@@ -19,10 +19,15 @@ export default defineConfig(({ mode }) => ({
     VitePWA({
       registerType: "autoUpdate",
       includeAssets: ["favicon.ico", "robots.txt", "og-image.png"],
+      workbox: {
+        globPatterns: ["**/*.{js,css,html,ico,png,svg,webmanifest}"],
+      },
       manifest: {
+        id: "/",
         name: "QRoll Smart Scan Attendance",
         short_name: "QRoll",
         description: "Automated attendance tracking solution using scanning technology.",
+        scope: "/",
         theme_color: "#4f46e5",
         background_color: "#ffffff",
         display: "standalone",
